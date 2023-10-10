@@ -1,0 +1,31 @@
+# THIS CODE is About "You are given three integers a, b, and c. Determine if one of them is the sum of the other two.
+# Step 1: Creating Tuple in Range of Input Value.
+# Step 2: Spliting Strings of Tuple by Indexing.
+# Step 3: Converting Strings into Integers.
+# Step 4: Using if-else to Satisfy Given Condition and Print Output.
+
+t=int(input())
+
+for _ in range(t):
+    
+    a, b, c = input().split()
+    num=(a, b, c)
+   
+    #print(num)
+    x=num[0]
+    x1=int(x)
+    #print(x1)
+    y=num[1]
+    y1=int(y)
+    #print(y1)
+    z=num[2]
+    z1=int(z)
+    #print(z1)
+    
+    #for i in num:
+      #  print(i,end="")
+    if x1+y1==z1 or y1+z1==x1 or x1+z1==y1:
+        print("YES")
+    else:
+        print("NO")
+    
