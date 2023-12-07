@@ -1,0 +1,16 @@
+#Using PYTHON:
+
+n=str(input())
+i=0
+while i<len(n):
+    if n[i]=='.':
+        print("0", end="")
+    elif n[i]=='-' and n[i+1]=='.':
+        print("1", end="")
+        i+=1
+    elif n[i]=='-' and n[i+1]=='-':
+        print("2", end="")
+        i+=1
+    else:
+        print("Null")
+    i+=1
