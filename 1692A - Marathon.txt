@@ -1,0 +1,33 @@
+# Using try except to avoid exit code 1.
+
+
+try:
+    n = int(input())
+
+    for _ in range(n):
+        countx=0
+        countx1=0
+        countx2=0
+        countx3=0      #Make sure to restore count to 0 in loop.
+    
+        tpl = tuple(map(int, input().split()))  
+        a, b, c, d = tpl 
+    
+        if (b>a and c>a and d>a):
+            countx+=3
+            print(countx)
+        elif a>b and a>c and a>d: 
+            countx1=0
+            print(countx1)   
+        elif (b<a and c<a and d>a) or (b<a and d<a and c>a) or (c<a and d<a and b>a):
+            countx2+=1
+            print(countx2)
+        elif (a>b and a<c and a<d) or (a>c and a<b and a<d) or (a>d and a<b and a<c):
+            countx3+=2
+            print(countx3)
+            
+        else: 
+            print(0)
+    #print(tpl)
+except EOFError:
+    pass
